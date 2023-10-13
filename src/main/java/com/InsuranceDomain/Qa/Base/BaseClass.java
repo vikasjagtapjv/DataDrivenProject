@@ -1,15 +1,18 @@
 package com.InsuranceDomain.Qa.Base;
 
-import org.openqa.selenium.By;
+import java.time.Duration;
+import java.util.Properties;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class BaseClass {
-public static void main(String[] args) {
-	WebDriver driver=new ChromeDriver();
+	public WebDriver driver;
+public void setup() {
+    driver=new ChromeDriver();
 	driver.manage().window().maximize();
-	
-	driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-	driver.findElement(By.xpath("")).click();
+	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+	Properties pro=new Properties();
+	pro.getProperty("weburl");
 }
 }
