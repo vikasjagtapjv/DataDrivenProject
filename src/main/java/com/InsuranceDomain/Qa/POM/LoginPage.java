@@ -21,7 +21,8 @@ public class LoginPage extends BaseClass {
 	@FindBy(xpath="//input[@name='password']")
 	WebElement Pass;
 	@FindBy(xpath="//button[text()=' Login ']")
-	WebElement button;
+	 private WebElement button;
+	
 	@FindBy(xpath="//p[text()='Forgot Your Password? ']")
-	WebElement forgetPass;
+	private WebElement forgetPass;
 }
