@@ -13,6 +13,7 @@ public void setup() {
 	driver.manage().window().maximize();
 	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 	Properties pro=new Properties();
+	
 	pro.getProperty("weburl");
 }
 }
