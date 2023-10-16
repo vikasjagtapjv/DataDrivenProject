@@ -1,19 +1,31 @@
 package com.InsuranceDomain.Qa.Base;
 
 import java.time.Duration;
-import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+
+import Utility.ReadConfig;
 
 public class BaseClass {
-	public WebDriver driver;
+	ReadConfig readConfig=new ReadConfig();
+	String url=readConfig.getApplicationUrl();
+	public static WebDriver driver;
+@BeforeClass	
 public void setup() {
     driver=new ChromeDriver();
 	driver.manage().window().maximize();
 	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-	Properties pro=new Properties();
 	
-	pro.getProperty("weburl");
+	
+	driver.get(url);
+}
+@AfterClass
+public void tearDown()
+{
+	driver.close();
+	driver.quit();
 }
 }
