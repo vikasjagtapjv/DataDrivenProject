@@ -35,7 +35,7 @@ public class AdminPom {
 	
 	@FindBy(xpath="//div[@class='oxd-select-text-input'][normalize-space()='Admin']")
 	 private WebElement selectAdmin;
-	@FindBy(xpath="//div[@class='oxd-select-text-input'][normalize-space()='ESS']")
+	@FindBy(xpath="(//div[text()='ESS'])[1]")
 	 private WebElement selectEss;
 	
 	@FindBy(xpath="//div[contains(text(),'Aaliyah Haq')]")
@@ -48,13 +48,13 @@ public class AdminPom {
 	@FindBy(xpath="//div[contains(text(),'-- Select --')]")
 	 private WebElement selectStatus ;
 	
-	@FindBy(xpath="//div[@class='oxd-select-text-input'][normalize-space()='Enabled']")
+	@FindBy(xpath="(//div[text()='Enabled'])[1]")
 	 private WebElement selectEnabled ;
 	@FindBy(xpath="//div[@class='oxd-select-text-input'][normalize-space()='Disabled']")
 	 private WebElement selectDisabled ;
 	
 	
-	@FindBy(xpath="//button[normalize-space()='Search']")
+	@FindBy(xpath="(//button[@type='submit'])[1]")
 	 private WebElement  search;
 	
 	@FindBy(xpath="//i[@class='oxd-icon bi-pencil-fill']")
