@@ -22,5 +22,15 @@ public class ReadConfig {
 		String url=pro.getProperty("weburl");
 		return url;
 	}
+	public String getUserName()
+	{
+		String userN=pro.getProperty("userName");
+		return userN;
+	}
+	public String getPassword()
+	{
+		String pass=pro.getProperty("password");
+		return pass;
+	}
 
 }

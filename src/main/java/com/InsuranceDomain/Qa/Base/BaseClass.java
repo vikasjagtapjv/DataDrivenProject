@@ -11,7 +11,9 @@ import Utility.ReadConfig;
 
 public class BaseClass {
 	ReadConfig readConfig=new ReadConfig();
-	String url=readConfig.getApplicationUrl();
+	public  String url=readConfig.getApplicationUrl();
+	public String UserName=readConfig.getUserName();
+	public String Password=readConfig.getPassword();
 	public static WebDriver driver;
 @BeforeClass	
 public void setup() {

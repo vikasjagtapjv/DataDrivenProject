@@ -14,12 +14,12 @@ public class LoginPage  {
 		PageFactory.initElements(rdriver, this);
 	}
 	
-	@FindBy(xpath="//p[text()='Username : Admin']")
-	private WebElement username;
+//	@FindBy(xpath="//p[text()='Username : Admin']")
+//	private WebElement username;
 	@FindBy(xpath="//input[@name='username']")
 	private WebElement Name;
-	@FindBy(xpath="//p[text()='Password : admin123']")
-	private WebElement password;
+//	@FindBy(xpath="//p[text()='Password : admin123']")
+//	private WebElement password;
 	
 	@FindBy(xpath="//input[@name='password']")
 	 private WebElement Pass;
@@ -29,14 +29,14 @@ public class LoginPage  {
 	@FindBy(xpath="//p[text()='Forgot Your Password? ']")
 	private WebElement forgetPass;
 	
-	public String getUserName()
-	{
-		return username.getText();
-	}
-	public String getPass()
-	{
-		return password.getText();
-	}
+//	public String getUserName()
+//	{
+//		return username.getText();
+//	}
+//	public String getPass()
+//	{
+//		return password.getText();
+//	}
 	public void setUserN(String name)
 	{
 		Name.sendKeys(name);
