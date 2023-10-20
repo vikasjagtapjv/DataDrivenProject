@@ -11,6 +11,8 @@ public class PIMPom {
 		ldriver=rdriver;
 		PageFactory.initElements(rdriver, this);
 	}
+	@FindBy(xpath="//a[@class='oxd-main-menu-item active']")
+	private WebElement clickPIM;
 	 
 	// -----SEARCH EMPLOYEE WITH AVAILABLE INFORMATION -------//
 	@FindBy(xpath="//div[contains(text(),'Virat')]")
@@ -57,6 +59,92 @@ public class PIMPom {
 //	@FindBy(xpath="")private WebElement ;
 //	@FindBy(xpath="")private WebElement ;
 	
+	
+	// ---- ACTION METHOD OF -SEARCH EMPLOYEE WITH AVAILABLE INFORMATION -------//
+	
+	public void click_OnPim()
+	{
+		clickPIM.click();
+	}
+	
+	
+	public String getEmployeeNm()
+	{
+		return firstName.getText();
+	}
+	public void setEmployeeNm(String nm)
+	{
+		employeeNm.sendKeys(nm);
+		
+	}
+	public void clickOnEmp()
+	{
+		employeeHint.click();
+	}
 
+	public String getEmpID()
+	{
+		return getempId.getText();
+	}
+	public void setEmpID(String Id)
+	{
+		id.sendKeys(Id);
+	}
+	public void clickOn_Save()
+	{
+		button_Save.click();
+	}
+	
+	
+	//-------ACTION METHODS OF--ADD EMPLOYEE----------------------//
+	public void click_On_addEmp()
+	{
+		addEmp.click();
+	}
+	
+	public void setEmployeefn(String eFNm)
+	{
+		firstNm.sendKeys(eFNm);
+	}
+	public void setEmployeeMN(String eMNm)
+	{
+		mddleNm.sendKeys(eMNm);
+	}
+	
+	public void setEmployeeLN(String eLNm)
+	{
+		lastNm.sendKeys(eLNm);
+	}
+	public void setEmployeeID(String eID)
+	{
+		e_Id.sendKeys(eID);
+	}
+	public void clickOnSave() {
+		Click_save.click();
+	}
+	
+	//-ACTION METHOD-OF---------REPORTS------------------------//
 
+	public void enterOnReport()
+	{
+		Reports.click();
+		}
+	public String getReportName()
+	{
+		return getReportNm.getText();
+	}
+	public void setReportName(String RName)
+	{
+		report_Nm.sendKeys(RName);
+	}
+	public void enterOnHint() {
+		hint_name.click();
+	}
+	public void click_On_Search() {
+		search.click();
+	}
+	public void clickON_Report()
+	{
+		select_report_file.click();
+	}
 }
