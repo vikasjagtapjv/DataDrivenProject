@@ -22,39 +22,38 @@ public class AdminPom {
 	
 	//------------------------SEARCH USER------------------------
 	
-	@FindBy(xpath="//div[contains(text(),'Aaliyah.Haq')]")
+	@FindBy(xpath="(//div[@class='oxd-table-cell oxd-padding-cell']//div)[3]")
 	 private WebElement  searchUserName;
 	
 	@FindBy(xpath="(//input[@class='oxd-input oxd-input--active'])[2]")
 	 private WebElement  enterUserName;
 	
-	@FindBy(xpath="(//div[contains(text(),'ESS')])[1]")
-	 private WebElement textEss;
+	
 	@FindBy(xpath="(//div[contains(text(),'-- Select --')])[1]")
 	 private WebElement  searchUserRoll;
 	
-	@FindBy(xpath="//div[@class='oxd-select-text-input'][normalize-space()='Admin']")
+	@FindBy(xpath="(//div[@class='oxd-select-option']//span)[1]")
 	 private WebElement selectAdmin;
-	@FindBy(xpath="(//div[text()='ESS'])[1]")
+	@FindBy(xpath="(//div[@class='oxd-select-option']//span)[2]")
 	 private WebElement selectEss;
 	
-	@FindBy(xpath="//div[contains(text(),'Aaliyah Haq')]")
+	@FindBy(xpath="(//div[@class='oxd-table-cell oxd-padding-cell'])[4]")
 	 private WebElement eName ;
 	@FindBy(xpath="//input[@placeholder='Type for hints...']")
 	 private WebElement EmployeeName;
+	@FindBy(xpath="(//div[@class='oxd-autocomplete-dropdown --positon-bottom'])[1]")
+	private WebElement dropdownHint;
 	
-	@FindBy(xpath="(//div[@role='cell'])[5]")
-	 private WebElement sEnabled ;
 	@FindBy(xpath="//div[contains(text(),'-- Select --')]")
 	 private WebElement selectStatus ;
 	
-	@FindBy(xpath="(//div[text()='Enabled'])[1]")
+	@FindBy(xpath="(//div[@class='oxd-select-option']//span)[3]")
 	 private WebElement selectEnabled ;
-	@FindBy(xpath="//div[@class='oxd-select-text-input'][normalize-space()='Disabled']")
+	@FindBy(xpath="(//div[@class='oxd-select-option']//span)[4]")
 	 private WebElement selectDisabled ;
 	
 	
-	@FindBy(xpath="(//button[@type='submit'])[1]")
+	@FindBy(xpath="//button[@type='submit']")
 	 private WebElement  search;
 	
 	@FindBy(xpath="//i[@class='oxd-icon bi-pencil-fill']")
