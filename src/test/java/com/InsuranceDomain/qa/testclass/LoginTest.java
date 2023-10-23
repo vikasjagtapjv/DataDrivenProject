@@ -1,15 +1,9 @@
 package com.InsuranceDomain.qa.testclass;
 
-import java.time.Duration;
-
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.InsuranceDomain.Qa.Base.BaseClass;
-import com.InsuranceDomain.Qa.POM.AdminPom;
 import com.InsuranceDomain.Qa.POM.LoginPage;
 
 
@@ -17,7 +11,7 @@ public class LoginTest extends BaseClass {
 	
 	@Test
 	public void loginTest()
-	{   driver.get(url);
+	{   //driver.get(url);
 		LoginPage lp=new LoginPage(driver);
 		//AdminPom ap=new AdminPom(driver);
 		lp.setUserN(UserName);

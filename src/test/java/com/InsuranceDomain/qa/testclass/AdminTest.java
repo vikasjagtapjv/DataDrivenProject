@@ -15,23 +15,37 @@ public class AdminTest extends BaseClass {
 	
 	
 	@Test
-	public void adminTest()
+	public void adminTest() throws InterruptedException
 	{
-		driver.get(url);
+		//driver.get(url);
 		LoginPage lp=new LoginPage(driver);
-		AdminPom ap=new AdminPom(driver);
+		
 		lp.setUserN(UserName);
 		lp.setPass(Password);
 		lp.click();
+		//Thread.sleep(5000);
 		
+		AdminPom ap=new AdminPom(driver);
 		ap.clickOnAdmin();
-		ap.setUserNm(ap.getUserName());
+		ap.setUserNm("Virat");
 		ap.clickOnUserRole();
-		ap.click_On_Admin();
-		ap.setEmployeeName(ap.getEmployeeName());
+		ap.usersRoles();
+		ap.enterEmployeeName("Virat");
 		ap.setStatus();
-		ap.click_On_Enabled();
+		ap.clickUsersStatus();
 		ap.clickOnSearch();
+		//add user
+		ap.clickOnAddUsers();
+		ap.userRole();
+		ap.usersAddRoles();
+		ap.clickOnStatus();
+		ap.addUsersStatus();
+		ap.addEmployeeName("Kohli");
+		ap.enterUserName("Ronaldo");
+		ap.enterPassword("admin1234");
+		ap.enterConfirmPassword("admin1234");
+		ap.clickOnSaveButton();
+		
 		}
 
 }
