@@ -180,40 +180,7 @@ public class AdminPom {
 		reset.click();
 
 	}
-	//Action method for add user
-/*
- * //click on add user
-	@FindBy(xpath="(//button[contains(@class,'oxd-button ')])[3]")
-	private WebElement add;
-	//user role
-	@FindBy(xpath="(//div[contains(text(),'Select')])[1]")
-	private WebElement UserRole;
-	@FindBy(xpath="//div[contains(@role,'option')]")
-	private List<WebElement>addUserRoles;
-	//enter status
-	@FindBy(xpath="(//div[contains(@class,'oxd-select-text-input')])[2]")
-	private WebElement selectAddUserStatus;
-	
-	@FindBy(xpath="(//div[contains(@role,'option')])")
-	private List<WebElement>userAddStatus;
-	@FindBy(xpath="//input[contains(@placeholder,'Type')]")
-	private WebElement eAddName;
-	
-	@FindBy(xpath="//div[contains(@class,'oxd-autocomplete-o')]")
-	private WebElement addHint;
-	//select userName
-	@FindBy(xpath="(//input[contains(@class,'oxd-input')])[2]")
-	private WebElement addUserName;
-	//enter password
-	@FindBy(xpath="(//input[contains(@type,'password')])[1]")
-	private WebElement Password;
-	//confirm password
-    @FindBy(xpath="(//input[contains(@type,'password')])[2]")
-	private WebElement confirmPassword ;
-    @FindBy(xpath="//button[contains(@type,'submit')]")
-	private WebElement addSave;
- */
-
+	//add user
 	public void clickOnAddUsers(){
 		add.click();
 	}

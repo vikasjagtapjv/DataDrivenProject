@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.InsuranceDomain.qa.testclass.AdminTest">
+      <class name="com.InsuranceDomain.qa.testclass.LoginTest">
         <methods>
           <include name="tearDown"/>
-          <include name="adminTest"/>
+          <include name="loginTest"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.InsuranceDomain.qa.testclass.AdminTest -->
+      </class> <!-- com.InsuranceDomain.qa.testclass.LoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
